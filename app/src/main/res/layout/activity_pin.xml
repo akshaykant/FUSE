@@ -10,29 +10,33 @@
     android:paddingBottom="40dp"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
-    android:paddingTop="40dp"
-    tools:context="com.akshaykant.com.fuse.MainActivity">
+    android:paddingTop="20dp"
+    tools:context="com.akshaykant.com.fuse.PinActivity">
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="120dp"
-        android:layout_height="150dp"
-        android:layout_margin="10dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/payment_icon" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:paddingTop="20dp"
+        android:singleLine="true"
+        android:text="@string/pin"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:background="@drawable/login_travel_transparent_background"
         android:orientation="vertical"
         android:paddingBottom="36dp"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
-        android:paddingTop="36dp">
+        android:paddingTop="0dp">
 
         <LinearLayout
-            android:id="@+id/mobile_number_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical">
@@ -48,13 +52,12 @@
                 tools:ignore="SpUsage" />
 
             <com.akshaykant.com.fuse.view.FloatLabeledEditText
-                android:id="@+id/mobile_number"
+                android:id="@+id/wallet_pin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                app:fletFloatingHint="@string/mobile"
-
+                app:fletFloatingHint="@string/wallet_pin"
                 app:fletHintTextColor="@color/cpb_blue_dark"
                 app:fletInputType="number"
                 app:fletSingleLine="true"
@@ -63,45 +66,12 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/aadhar_number_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
             android:gravity="center_vertical">
 
             <com.akshaykant.com.fuse.font.FontelloTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/fontello_user"
-                android:textColor="@color/cpb_blue_dark"
-                android:textSize="16dp"
-                tools:ignore="SpUsage" />
 
-            <com.akshaykant.com.fuse.view.FloatLabeledEditText
-                android:id="@+id/aadhar_number"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
-                android:layout_weight="1"
-                app:fletFloatingHint="@string/aadhar"
-                app:fletHintTextColor="@color/cpb_blue_dark"
-                app:fletInputType="number"
-                app:fletPassword="true"
-                app:fletSingleLine="true"
-                app:fletTextBackground="@drawable/edit_text_background_accent"
-                app:fletTextColor="@color/main_color_grey_700"></com.akshaykant.com.fuse.view.FloatLabeledEditText>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/otp_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:gravity="center_vertical"
-            android:visibility="gone">
-
-            <com.akshaykant.com.fuse.font.FontelloTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -111,80 +81,109 @@
                 tools:ignore="SpUsage" />
 
             <com.akshaykant.com.fuse.view.FloatLabeledEditText
-                android:id="@+id/otp"
+                android:id="@+id/confirm_wallet_pin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_weight="1"
-                app:fletFloatingHint="@string/otp"
+                app:fletFloatingHint="@string/confirm_wallet_pin"
                 app:fletHintTextColor="@color/cpb_blue_dark"
                 app:fletInputType="number"
-                app:fletPassword="true"
+                app:fletSingleLine="true"
+                app:fletTextBackground="@drawable/edit_text_background_accent"
+                app:fletTextColor="@color/main_color_grey_700"></com.akshaykant.com.fuse.view.FloatLabeledEditText>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_travel_transparent_background"
+        android:orientation="vertical"
+        android:paddingBottom="36dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.akshaykant.com.fuse.font.FontelloTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/fontello_drag_and_drop"
+                android:textColor="@color/cpb_blue_dark"
+                android:textSize="16dp"
+                tools:ignore="SpUsage" />
+
+            <com.akshaykant.com.fuse.view.FloatLabeledEditText
+                android:id="@+id/transaction_pin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                app:fletFloatingHint="@string/transaction_pin"
+                app:fletHintTextColor="@color/cpb_blue_dark"
+                app:fletInputType="number"
                 app:fletSingleLine="true"
                 app:fletTextBackground="@drawable/edit_text_background_accent"
                 app:fletTextColor="@color/main_color_grey_700"></com.akshaykant.com.fuse.view.FloatLabeledEditText>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <com.akshaykant.com.fuse.font.FontelloTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/fontello_password"
+                android:textColor="@color/cpb_blue_dark"
+                android:textSize="16dp"
+                tools:ignore="SpUsage" />
+
+            <com.akshaykant.com.fuse.view.FloatLabeledEditText
+                android:id="@+id/confirm_transaction_pin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                app:fletFloatingHint="@string/confirm_transaction_pin"
+                app:fletHintTextColor="@color/cpb_blue_dark"
+                app:fletInputType="number"
+                app:fletSingleLine="true"
+                app:fletTextBackground="@drawable/edit_text_background_accent"
+                app:fletTextColor="@color/main_color_grey_700"></com.akshaykant.com.fuse.view.FloatLabeledEditText>
+        </LinearLayout>
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:gravity="center">
 
-        <!--     <com.akshaykant.com.fuse.font.RobotoTextView
-                 android:id="@+id/next_button"
-                 style="@style/ButtonStyle.RaisedEmpty"
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:layout_margin="0dp"
-                 android:padding="10dp"
-                 android:background="@drawable/login_travel_selector_button"
-                 android:minWidth="200dp"
-                 android:text="@string/next"
-                 android:textColor="@android:color/white"
-                 app:typeface="robotoMedium" />-->
-
         <com.akshaykant.com.fuse.font.RobotoTextView
-            android:id="@+id/onboard_button"
+            android:id="@+id/confirm_button"
             style="@style/ButtonStyle.RaisedEmpty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="0dp"
             android:background="@drawable/login_travel_selector_button"
-            android:minWidth="200dp"
+            android:minWidth="300dp"
             android:padding="10dp"
-            android:text="@string/onboard"
+            android:text="@string/confirm"
             android:textColor="@android:color/white"
             app:typeface="robotoMedium" />
-
-        <com.akshaykant.com.fuse.font.RobotoTextView
-            android:id="@+id/submit_button"
-            style="@style/ButtonStyle.RaisedEmpty"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="0dp"
-            android:background="@drawable/login_travel_selector_button"
-            android:minWidth="200dp"
-            android:padding="10dp"
-            android:text="@string/submit"
-            android:textColor="@android:color/white"
-            android:visibility="gone"
-            app:typeface="robotoMedium" />
-
-        <com.akshaykant.com.fuse.font.RobotoTextView
-            android:id="@+id/skip"
-            style="@style/ButtonStyle.RaisedEmpty"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/transparent_button_selector"
-            android:minWidth="96dp"
-            android:text="@string/login"
-            android:textColor="@android:color/white" />
-
     </LinearLayout>
-
 
 </LinearLayout>

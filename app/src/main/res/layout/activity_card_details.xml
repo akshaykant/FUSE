@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/grey_300"
+    tools:context="com.akshaykant.com.fuse.CardDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/cardlayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
+        android:background="#f3f8fb"
+        android:translationZ="10dp">
+
+        <ImageView
+
+            android:id="@+id/fragment_card_cardimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/card" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="39dp"
+            android:padding="2dp"
+            android:text="PAYMENT TOKEN"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#212121" />
+
+        <EditText
+            android:id="@+id/card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="60dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/button_white"
+            android:hint="4888 0440 0077 4343"
+            android:inputType="number"
+            android:maxLength="16"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+
+            android:paddingTop="10dp"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#212121" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="101dp"
+            android:padding="2dp"
+            android:text="MONTH"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#212121" />
+
+        <EditText
+            android:id="@+id/card_number_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button_white"
+            android:hint="MM"
+            android:inputType="number"
+            android:maxLength="2"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#212121" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="132dp"
+            android:layout_marginTop="101dp"
+            android:padding="2dp"
+            android:text="YEAR"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#212121" />
+
+        <EditText
+            android:id="@+id/card_number_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button_white"
+            android:hint="YY"
+            android:inputType="number"
+            android:maxLength="2"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#212121" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="235dp"
+            android:layout_marginTop="101dp"
+            android:padding="2dp"
+            android:text="CVV"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="#212121" />
+
+        <EditText
+            android:id="@+id/card_number_cvv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="230dp"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button_white"
+            android:hint="123"
+            android:inputType="number"
+            android:maxLength="3"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="#212121" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cardlayout"
+        android:layout_marginTop="100dp"
+        android:gravity="center">
+
+        <com.akshaykant.com.fuse.font.RobotoTextView
+            android:id="@+id/digitize_button"
+            style="@style/ButtonStyle.RaisedEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:background="@drawable/login_travel_selector_button"
+            android:minWidth="300dp"
+            android:padding="10dp"
+            android:text="@string/next"
+            android:textColor="@android:color/white"
+            app:typeface="robotoMedium" />
+    </LinearLayout>
+
+</RelativeLayout>
+
