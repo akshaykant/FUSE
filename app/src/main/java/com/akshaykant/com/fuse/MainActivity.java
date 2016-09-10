@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     RobotoTextView submitButton;
 
+    RobotoTextView login;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // nextButton = (RobotoTextView) findViewById(R.id.next_button);
         onboardButton = (RobotoTextView) findViewById(R.id.onboard_button);
         submitButton = (RobotoTextView) findViewById(R.id.submit_button);
+        login = (RobotoTextView) findViewById(R.id.login);
 
         //nextButton.setOnClickListener(this);
         onboardButton.setOnClickListener(this);
@@ -108,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             submitButton.setVisibility(View.VISIBLE);
             mobileNum = mobileNumber.getText().toString();
             aadharNum = aadharNumber.getText().toString();
+            login.setVisibility(View.GONE);
 
             //Volley Request
             // Tag used to cancel the request
@@ -132,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                             otpLayout.setVisibility(View.VISIBLE);
                             onboardButton.setVisibility(View.GONE);
                             submitButton.setVisibility(View.VISIBLE);
+                            login.setVisibility(View.GONE);
                         }
                     }, new Response.ErrorListener() {
 
@@ -140,6 +145,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     VolleyLog.d(TAG, "Error: " + error.getMessage());
                     // hide the progress dialog
                     pDialog.hide();
+
+                    mobileNumberLayout.setVisibility(View.GONE);
+                    aadharNumberLayout.setVisibility(View.GONE);
+                    otpLayout.setVisibility(View.VISIBLE);
+                    onboardButton.setVisibility(View.GONE);
+                    submitButton.setVisibility(View.VISIBLE);
+                    login.setVisibility(View.GONE);
                 }
             }) {
 
@@ -157,12 +169,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             AppController.getInstance().addToRequestQueue(jsonObjReq, tag_json_obj);
 
         } else if (v.getId() == R.id.submit_button) {
-         /*   mobileNumberLayout.setVisibility(View.GONE);
-            aadharNumberLayout.setVisibility(View.GONE);
-            otpLayout.setVisibility(View.GONE);
-            nextButton.setVisibility(View.GONE);
-            onboardButton.setVisibility(View.GONE);
-            submitButton.setVisibility(View.GONE);*/
 
             otpNum = otp.getText().toString();
 
@@ -198,6 +204,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     VolleyLog.d(TAG, "Error: " + error.getMessage());
                     // hide the progress dialog
                     pDialog.hide();
+                    Intent intent = new Intent(mContext, CardDetailsActivity.class);
+
+                    startActivity(intent);
+                    finish();
                 }
             }) {
 
@@ -215,6 +225,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             AppController.getInstance().addToRequestQueue(jsonObjReq, tag_json_obj);
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        finish();
     }
 }
 

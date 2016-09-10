@@ -174,7 +174,7 @@
             app:typeface="robotoMedium" />
 
         <com.akshaykant.com.fuse.font.RobotoTextView
-            android:id="@+id/skip"
+            android:id="@+id/login"
             style="@style/ButtonStyle.RaisedEmpty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -182,7 +182,7 @@
             android:background="@drawable/transparent_button_selector"
             android:minWidth="96dp"
             android:text="@string/login"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/black" />
 
     </LinearLayout>
 

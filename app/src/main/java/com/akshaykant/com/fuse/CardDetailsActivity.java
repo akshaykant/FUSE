@@ -61,4 +61,13 @@ public class CardDetailsActivity extends AppCompatActivity implements View.OnCli
 
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(mContext, MainActivity.class);
+        startActivity(intent);
+        finish();
+
+    }
 }

@@ -57,11 +57,20 @@ public class PinActivity extends AppCompatActivity implements View.OnClickListen
             mTransactionPin.getText().toString();
             mConfirmTransactionPin.getText().toString();
 
-            Intent intent = new Intent(mContext, MainActivity.class);
-            //intent.putExtra("activity", "MainActivity");
+            Intent intent = new Intent(mContext, ContactsActivity.class);
+            //intent.putExtra("activity", "ContactsActivity");
             startActivity(intent);
             finish();
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(mContext, CardDetailsActivity.class);
+        startActivity(intent);
+        finish();
+
     }
 }
