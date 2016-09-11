@@ -60,6 +60,7 @@
                 app:fletFloatingHint="@string/wallet_pin"
                 app:fletHintTextColor="@color/cpb_blue_dark"
                 app:fletInputType="number"
+                app:fletPassword="true"
                 app:fletSingleLine="true"
                 app:fletTextBackground="@drawable/edit_text_background_accent"
                 app:fletTextColor="@color/main_color_grey_700"></com.akshaykant.com.fuse.view.FloatLabeledEditText>
@@ -89,6 +90,7 @@
                 app:fletFloatingHint="@string/confirm_wallet_pin"
                 app:fletHintTextColor="@color/cpb_blue_dark"
                 app:fletInputType="number"
+                app:fletPassword="true"
                 app:fletSingleLine="true"
                 app:fletTextBackground="@drawable/edit_text_background_accent"
                 app:fletTextColor="@color/main_color_grey_700"></com.akshaykant.com.fuse.view.FloatLabeledEditText>
@@ -130,6 +132,7 @@
                 app:fletFloatingHint="@string/transaction_pin"
                 app:fletHintTextColor="@color/cpb_blue_dark"
                 app:fletInputType="number"
+                app:fletPassword="true"
                 app:fletSingleLine="true"
                 app:fletTextBackground="@drawable/edit_text_background_accent"
                 app:fletTextColor="@color/main_color_grey_700"></com.akshaykant.com.fuse.view.FloatLabeledEditText>
@@ -159,6 +162,7 @@
                 app:fletFloatingHint="@string/confirm_transaction_pin"
                 app:fletHintTextColor="@color/cpb_blue_dark"
                 app:fletInputType="number"
+                app:fletPassword="true"
                 app:fletSingleLine="true"
                 app:fletTextBackground="@drawable/edit_text_background_accent"
                 app:fletTextColor="@color/main_color_grey_700"></com.akshaykant.com.fuse.view.FloatLabeledEditText>

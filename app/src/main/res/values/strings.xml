@@ -76,6 +76,10 @@
     <string name="pin"><![CDATA[Enter Wallet & Transaction Pin]]></string>
     <string name="confirm">CONFIRM</string>
     <string name="login">LOGIN</string>
+    <string name="friend">Friend Name</string>
+
+    <string name="messagehint">Type your message here</string>
+    <string name="action_settings">Settings</string>
 
 
 </resources>

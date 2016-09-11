@@ -79,4 +79,9 @@
     <color name="cyan_A700">#00b7d3</color>
     <color name="cyan_A200">#70ccdd</color>
     <color name="grey_300">#ffe0e0e0</color>
+
+    <color name="msgleft">#ffe8d3c9</color>
+    <color name="msgright">#ffdac5d9</color>
+
+    <color name="primary">#3F51B5</color>
 </resources>

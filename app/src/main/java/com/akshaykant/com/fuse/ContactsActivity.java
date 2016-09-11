@@ -2,6 +2,7 @@ package com.akshaykant.com.fuse;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -59,7 +60,9 @@ public class ContactsActivity extends AppCompatActivity implements AdapterView.O
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-
+        Intent mIntent = new Intent(this, ChatClient.class);
+        mIntent.putExtra(getString(R.string.friend), "" + adapterView.getItemIdAtPosition(position));
+        startActivity(mIntent);
     }
 
     // This class processes the Json string and converts it into a list of FriendInfo objects

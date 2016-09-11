@@ -32,7 +32,7 @@
             android:layout_marginLeft="52dp"
             android:layout_marginTop="39dp"
             android:padding="2dp"
-            android:text="PAYMENT TOKEN"
+            android:text="CARD NUMBER"
             android:textAppearance="?android:textAppearanceSmall"
             android:textColor="#212121" />
 
