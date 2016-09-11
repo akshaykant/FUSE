@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteBase /
+RewriteRule authorise /aadhar/controllers/get_otp.php [NC,P,R=301]
+RewriteRule get_user_data /aadhar/controllers/verify_otp.php [NC,P,R=301]
