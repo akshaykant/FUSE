@@ -80,6 +80,8 @@
 
     <string name="messagehint">Type your message here</string>
     <string name="action_settings">Settings</string>
+    <string name="pay">PAY</string>
+    <string name="cancel">CANCEL</string>
 
 
 </resources>

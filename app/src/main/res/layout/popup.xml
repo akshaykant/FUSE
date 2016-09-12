@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popUpPay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_travel_transparent_background"
+    android:orientation="vertical"
+    android:paddingBottom="36dp"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    android:paddingTop="36dp">
+
+    <TextView
+        android:id="@+id/confirmTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:paddingTop="20dp"
+        android:singleLine="false"
+        android:text="@string/pay"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/payment_icon" />
+
+    <LinearLayout
+        android:id="@+id/aadhar_number_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical">
+
+        <com.akshaykant.com.fuse.font.FontelloTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/fontello_password"
+            android:textColor="@color/cpb_blue_dark"
+            android:textSize="16dp"
+            tools:ignore="SpUsage" />
+
+        <com.akshaykant.com.fuse.view.FloatLabeledEditText
+            android:id="@+id/transaction_pin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            app:fletFloatingHint="@string/transaction_pin"
+            app:fletHintTextColor="@color/cpb_blue_dark"
+            app:fletInputType="number"
+            app:fletPassword="true"
+            app:fletSingleLine="true"
+            app:fletTextBackground="@drawable/edit_text_background_accent"
+            app:fletTextColor="@color/main_color_grey_700"></com.akshaykant.com.fuse.view.FloatLabeledEditText>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center">
+
+        <com.akshaykant.com.fuse.font.RobotoTextView
+            android:id="@+id/accept_pay"
+            style="@style/ButtonStyle.RaisedEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/login_travel_selector_button"
+            android:minWidth="200dp"
+            android:padding="10dp"
+            android:text="@string/pay"
+
+            android:textColor="@android:color/white"
+            app:typeface="robotoMedium" />
+
+        <com.akshaykant.com.fuse.font.RobotoTextView
+            android:id="@+id/cancel_pay"
+            style="@style/ButtonStyle.RaisedEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/login_travel_selector_button"
+            android:minWidth="200dp"
+            android:padding="10dp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            app:typeface="robotoMedium" />
+
+    </LinearLayout>
+
+</LinearLayout>

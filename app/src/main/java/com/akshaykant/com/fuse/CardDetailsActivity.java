@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.akshaykant.com.fuse.font.RobotoTextView;
 
@@ -56,6 +57,7 @@ public class CardDetailsActivity extends AppCompatActivity implements View.OnCli
 
             Intent intent = new Intent(mContext, PinActivity.class);
             //intent.putExtra("activity", "PinActivity");
+            Toast.makeText(CardDetailsActivity.this, "Enter wallet & transaction Pin", Toast.LENGTH_LONG).show();
             startActivity(intent);
             finish();
 

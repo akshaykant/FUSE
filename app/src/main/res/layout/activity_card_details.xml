@@ -46,14 +46,14 @@
             android:layout_marginRight="60dp"
             android:layout_marginTop="60dp"
             android:background="@drawable/button_white"
-            android:hint="4888 0440 0077 4343"
             android:inputType="number"
-            android:maxLength="16"
+            android:maxLength="20"
             android:paddingBottom="10dp"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-
             android:paddingTop="10dp"
+
+            android:text="4888 0440 0077 4343"
             android:textAppearance="?android:textAppearanceSmall"
             android:textColor="#212121" />
 
@@ -79,13 +79,13 @@
             android:layout_marginLeft="50dp"
             android:layout_marginTop="120dp"
             android:background="@drawable/button_white"
-            android:hint="MM"
             android:inputType="number"
             android:maxLength="2"
             android:paddingBottom="10dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:paddingTop="10dp"
+            android:text="04"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="#212121" />
 
@@ -110,13 +110,13 @@
             android:layout_marginLeft="130dp"
             android:layout_marginTop="120dp"
             android:background="@drawable/button_white"
-            android:hint="YY"
             android:inputType="number"
             android:maxLength="2"
             android:paddingBottom="10dp"
             android:paddingLeft="30dp"
             android:paddingRight="20dp"
             android:paddingTop="10dp"
+            android:text="20"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="#212121" />
 
@@ -141,13 +141,13 @@
             android:layout_marginLeft="230dp"
             android:layout_marginTop="120dp"
             android:background="@drawable/button_white"
-            android:hint="123"
             android:inputType="number"
             android:maxLength="3"
             android:paddingBottom="10dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:paddingTop="10dp"
+            android:text="292"
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="#212121" />
     </RelativeLayout>

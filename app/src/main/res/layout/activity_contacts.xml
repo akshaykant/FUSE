@@ -3,12 +3,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ContactsActivity">
-
+    <!--To include toolbar to the layout which accepts tool_bar.xml  and can add features to the top of the layout-->
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar"
+        android:elevation="5dp"></include>
     <ListView
         android:id="@+id/friendListView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tool_bar"
         android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

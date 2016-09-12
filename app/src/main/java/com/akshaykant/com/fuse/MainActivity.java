@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.akshaykant.com.fuse.font.RobotoTextView;
 import com.akshaykant.com.fuse.view.FloatLabeledEditText;
@@ -205,7 +206,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     // hide the progress dialog
                     pDialog.hide();
                     Intent intent = new Intent(mContext, CardDetailsActivity.class);
-
+                    Toast.makeText(MainActivity.this, "Successful! Enter default card details.", Toast.LENGTH_LONG).show();
                     startActivity(intent);
                     finish();
                 }

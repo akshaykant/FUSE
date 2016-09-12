@@ -60,8 +60,41 @@ public class ContactsActivity extends AppCompatActivity implements AdapterView.O
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+        String pos = "" + adapterView.getItemIdAtPosition(position);
+        String name = null;
+
+        switch (pos) {
+            case "0":
+                name = "NISHTHA";
+                break;
+            case "1":
+                name = "AYUSH";
+                break;
+            case "2":
+                name = "AKSHAY";
+                break;
+            case "3":
+                name = "PALAK";
+                break;
+            case "4":
+                name = "RINGO";
+                break;
+            case "5":
+                name = "PAUL";
+                break;
+            case "6":
+                name = "JOHN";
+                break;
+            case "7":
+                name = "GEORGE";
+                break;
+
+            default:
+                name = "SEQUOIA";
+                break;
+        }
         Intent mIntent = new Intent(this, ChatClient.class);
-        mIntent.putExtra(getString(R.string.friend), "" + adapterView.getItemIdAtPosition(position));
+        mIntent.putExtra(getString(R.string.friend), name);
         startActivity(mIntent);
     }
 
